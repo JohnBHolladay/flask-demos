@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from flask import Flask, jsonify
-from waitress import serve # Import waitress, to use instead of Flask's default webserver
+from waitress import serve
 app = Flask(__name__)
 
 stuff = { 
@@ -32,7 +32,4 @@ def smarter_path(lookup):
             html.append('</ul>')
     return ''.join(html)
 
-serve(app) # This is the only thing that changed besides the import.
-           # It seems to default to port 8080 instead of 5000. 
-           # It may bitch about favicon.ico not being found. 
-           # That's fine, favicon.ico is the little icon that shows up in your address bar when you go to a page.
+serve(app)
