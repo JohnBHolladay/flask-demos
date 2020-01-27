@@ -25,7 +25,7 @@ def smarter_path(lookup):
         html.append('</ul>')
     else:
         for group, items in stuff.items():
-            html.append(f"<h2>{group}</h2>")
+            html.append(f"<h2>{group.capitalize()}</h2>")
             html.append('<ul>')
             for item in items:
                 html.append(f"<li>{item}</li>")
